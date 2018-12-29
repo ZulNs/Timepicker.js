@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<!--meta http-equiv="refresh" content="1;url="-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="ZulNs">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="all">
+	<meta name="copyright" content="ZulNs">
+	<title>Directly Draggable Analog-Clock Style Timepicker</title>
+	<!--link rel="icon" href="favicon.svg" type="image/svg+xml"-->
+	<link rel="stylesheet" href="timepicker.css">
+	<style type="text/css">
+		#clock {
+			margin-left: 12px;
+			margin-top: 10px;
+		}
+		.icon-button {
+			width: 30px;
+		}
+		input {
+			width: 188px;
+			margin-bottom: 8px;
+		}
+	</style>
+</head>
+<body>
+	<p>Design by ZulNs @Yogyakarta, February 2016</p>
+	<div id="clock">
+		<input id="clock-time" type="text" />
+		<button class="icon-button" onclick="showClock();" title="Show/hide the clock/timepicker">&#x1f554;</button>
+		<button class="icon-button" onclick="changeMode();" title="Change to clock/timepicker mode">&#x231a;</button>
+	</div>
+	<p>See API Documentation:
+		<ul>
+			<li><a href="timepicker-api-doc.md" target="_blank">Markdown version</a></li>
+			<li><a href="timepicker-api-doc.html" target="_blank">HTML version</a></li>
+		</ul>
+	</p>
+	<script type="text/javascript" src="timepicker.js"></script>
+	<script type="text/javascript">
+		var tp = new Timepicker();
+		document.getElementById('clock').appendChild(tp.getElement());
+		tp.show();
+		
+		tp.callback = function() {
+			document.getElementById('clock-time').value = tp.getTimeString();
+		};
+		
+		function showClock() {
+			if (tp.isHidden()) tp.show();
+			else tp.hide();
+		}
+		
+		function changeMode() {
+			tp.changeClockMode();
+		}
+	</script>
+</body>
+</html>
