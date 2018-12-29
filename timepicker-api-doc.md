@@ -4,10 +4,10 @@
 This widget can be used to display a **Realtime Analog Clock** besides as a **Timepicker**. As an timepicker, this widget can be directly draggable at both *hour hand* and *minute hand*. Drag at behind the axis of both hands which causes reverse rotation is also supported. Dragging with touch devices is supported well. Dragging at the clock hand is very smoothly, no matter how much angle of rotation have been made by your finger or mouse pointer, over there the appropriate hand will point at without lagging nor leading even a little. Toggling between 12 hours and 24 hours system can be done on the fly.
 
 ## Download
-- [timepicker.js](https://github.com/ZulNs/Analog-Clock-Timepicker/raw/master/timepicker.js)
+- [timepicker.js](timepicker.js)
 
 ## Requirements
-- [timepicker.css](https://github.com/ZulNs/Analog-Clock-Timepicker/raw/master/timepicker.css) for styling this widget
+- [timepicker.css](timepicker.css) for styling this widget
 
 ## Public Constructor
 **`Timepicker(isClockMode, is24HoursSystem, hour, minute, second)`**
@@ -111,8 +111,8 @@ This widget can be used to display a **Realtime Analog Clock** besides as a **Ti
 ### Embedding the Timepicker Widget on a Web Page
 Generally, you'll need to include these both files on any page to use the widget:
 
-	<link rel="stylesheet" href="https://github.com/ZulNs/Analog-Clock/Timepicker/raw/master/timepicker.css"/>
-	<script type="text/javascript" src="https://github.com/ZulNs/Analog-Clock/Timepicker/raw/master/timepicker.js"></script>
+	<link rel="stylesheet" href="timepicker.css"/>
+	<script type="text/javascript" src="timepicker.js"></script>
 
 For the following code examples, please insert them at anywhere you want within the document's body below the above code.
 
