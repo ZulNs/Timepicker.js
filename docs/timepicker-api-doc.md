@@ -101,73 +101,77 @@ This widget can be used to display a **Realtime Analog Clock** besides as a **Ti
 
   For example:
 
-      ```javascript
-      var widget = new Timepicker();
-      widget.callback = function() {
-          // do stuff
-      };
-      ```
+  ```javascript
+  var widget = new Timepicker();
+  widget.callback = function() {
+      // do stuff
+  };
+  ```
 
 ## Getting Started
 
 ### Embedding the Timepicker Widget on a Web Page
 Generally, you'll need to include these both files on any page to use the widget:
 
-	<link rel="stylesheet" href="libs/timepicker.css"/>
-	<script type="text/javascript" src="libs/timepicker.js"></script>
+```html
+<link rel="stylesheet" href="libs/timepicker.css"/>
+<script type="text/javascript" src="libs/timepicker.js"></script>
+```
 
 For the following code examples, please insert them at anywhere you want within the document's body below the above code.
 
 ### Embedding the Widget as a Realtime Analog Clock
 #### Code example:
 
-	<div id="clock"></div>
-	<script type="text/javascript">
-		var clock = new Timepicker(true);
-		document.getElementById('clock').appendChild(clock.getElement());
-		clock.show();
-		
-		clock.callback = function() {
-			clock.show(); // prevent the widget from being closed
-		};
-	</script>
+```html
+<div id="clock"></div>
+<script type="text/javascript">
+    var clock = new Timepicker(true);
+    document.getElementById('clock').appendChild(clock.getElement());
+    clock.show();
+
+    clock.callback = function() {
+        clock.show(); // prevent the widget from being closed
+    };
+</script>
+```
 
 #### Result:
 
-<p data-height="268" data-theme-id="22373" data-slug-hash="yemvNa" data-default-tab="result" data-user="zulns" class='codepen'>See the Pen <a href='http://codepen.io/zulns/pen/yemvNa/'>Embedding the Widget as a Realtime Analog Clock</a> by ZulNs (<a href='http://codepen.io/zulns'>@zulns</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+See result at [CodePen](https://codepen.io/zulns/full/yemvNa)
 
 &nbsp;
 
 ### Embedding the Widget as a Timepicker
 #### Code example:
 
-	<div id="timepicker"><input id="picked-text" type="text" size="32"/><input id="pick-button" type="button" onclick="pickATime();" value="pick"/></div>
-	<script type="text/javascript">
-		var pickedTxt = document.getElementById('picked-text'),
-			pickBtn = document.getElementById('pick-button'),
-			timepicker = new Timepicker();
-		document.getElementById('timepicker').appendChild(timepicker.getElement());
-		timepicker.getElement().style.marginTop = '10px';
-		
-		timepicker.callback = function() {
-			pickBtn.style.display = 'inline-block';
-			pickedTxt.value = timepicker.getTimeString();
-			pickedTxt.selectionStart = 0;
-			pickedTxt.selectionEnd = pickedTxt.value.length;
-			pickedTxt.focus();
-		};
-		
-		function pickATime() {
-			pickBtn.style.display = 'none';
-			timepicker.show();
-		}
-	</script>
+```html
+<div id="timepicker"><input id="picked-text" type="text" size="32"/><input id="pick-button" type="button" onclick="pickATime();" value="pick"/></div>
+<script type="text/javascript">
+    var pickedTxt = document.getElementById('picked-text'),
+    pickBtn = document.getElementById('pick-button'),
+    timepicker = new Timepicker();
+    document.getElementById('timepicker').appendChild(timepicker.getElement());
+    timepicker.getElement().style.marginTop = '10px';
+
+    timepicker.callback = function() {
+        pickBtn.style.display = 'inline-block';
+        pickedTxt.value = timepicker.getTimeString();
+        pickedTxt.selectionStart = 0;
+        pickedTxt.selectionEnd = pickedTxt.value.length;
+        pickedTxt.focus();
+    };
+
+    function pickATime() {
+        pickBtn.style.display = 'none';
+        timepicker.show();
+    }
+</script>
+```
 
 #### Result:
 
-<p data-height="268" data-theme-id="22373" data-slug-hash="obKENy" data-default-tab="result" data-user="zulns" class='codepen'>See the Pen <a href='http://codepen.io/zulns/pen/obKENy/'>Embedding the Widget as a Timepicker</a> by ZulNs (<a href='http://codepen.io/zulns'>@zulns</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="htpp://assets.codepen.io/assets/embed/ei.js"></script>
+See result at [CodePen](https://codepen.io/zulns/full/obKENy)
 
 &nbsp;
 
