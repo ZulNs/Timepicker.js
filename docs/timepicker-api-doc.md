@@ -101,10 +101,12 @@ This widget can be used to display a **Realtime Analog Clock** besides as a **Ti
 
   For example:
 
+      ```javascript
       var widget = new Timepicker();
       widget.callback = function() {
           // do stuff
       };
+      ```
 
 ## Getting Started
 
