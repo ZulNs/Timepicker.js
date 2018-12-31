@@ -113,9 +113,18 @@ This widget can be used to display a **Realtime Analog Clock** besides as a **Ti
 ### Embedding the Timepicker Widget on a Web Page
 Generally, you'll need to include these both files on any page to use the widget:
 
+Offline mode:
+
 ```html
-<link rel="stylesheet" href="libs/timepicker.css"/>
-<script type="text/javascript" src="libs/timepicker.js"></script>
+<link rel="stylesheet" href="../libs/timepicker.css"/>
+<script type="text/javascript" src="../libs/timepicker.js"></script>
+```
+
+Or online mode:
+
+```html
+<link rel="stylesheet" href="https://ZulNs.github.io/libs/timepicker.css"/>
+<script type="text/javascript" src="https://ZulNs.github.io/libs/timepicker.js"></script>
 ```
 
 For the following code examples, please insert them at anywhere you want within the document's body below the above code.
@@ -146,11 +155,13 @@ See result at [CodePen](https://codepen.io/zulns/full/yemvNa)
 #### Code example:
 
 ```html
-<div id="timepicker"><input id="picked-text" type="text" size="32"/><input id="pick-button" type="button" onclick="pickATime();" value="pick"/></div>
+<input id="picked-text" type="text" style="width: 200px;" />
+<input id="pick-button" type="button" onclick="pickATime();" style="width: 50px;" value="pick" />
+<div id="timepicker"></div>
 <script type="text/javascript">
     var pickedTxt = document.getElementById('picked-text'),
-    pickBtn = document.getElementById('pick-button'),
-    timepicker = new Timepicker();
+        pickBtn = document.getElementById('pick-button'),
+        timepicker = new Timepicker();
     document.getElementById('timepicker').appendChild(timepicker.getElement());
     timepicker.getElement().style.marginTop = '10px';
 
@@ -164,6 +175,7 @@ See result at [CodePen](https://codepen.io/zulns/full/yemvNa)
 
     function pickATime() {
         pickBtn.style.display = 'none';
+        pickedTxt.value = '';
         timepicker.show();
     }
 </script>
