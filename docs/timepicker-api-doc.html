@@ -10,8 +10,8 @@
 	<meta name="description" content="">
 	<meta name="robots" content="all">
 	<meta name="copyright" content="ZulNs">
-	<!--link rel="icon" href="favicon.ico" type="image/x-icon"-->
-	<!--link rel="icon" href="favicon.png" type="image/png"-->
+	<!--link rel="icon" href="favicon.ico" type="image/x-icon" /-->
+	<!--link rel="icon" href="favicon.png" type="image/png" /-->
 <style type="text/css">
 	.style-option {
 		position: fixed;
@@ -75,11 +75,11 @@
 <p>This widget can be used to display a <strong>Realtime Analog Clock</strong> besides as a <strong>Timepicker</strong>. As an timepicker, this widget can be directly draggable at both <em>hour hand</em> and <em>minute hand</em>. Drag at behind the axis of both hands which causes reverse rotation is also supported. Dragging with touch devices is supported well. Dragging at the clock hand is very smoothly, no matter how much angle of rotation have been made by your finger or mouse pointer, over there the appropriate hand will point at without lagging nor leading even a little. Toggling between 12 hours and 24 hours system can be done on the fly.</p>
 <h2>Download</h2>
 <ul>
-<li><a href="timepicker.js" target="_blank">timepicker.js</a></li>
+<li><a href="../libs/timepicker.js" target="_blank">timepicker.js</a></li>
 </ul>
 <h2>Requirements</h2>
 <ul>
-<li><a href="timepicker.css" target="_blank">timepicker.css</a> for styling this widget</li>
+<li><a href="../libs/timepicker.css" target="_blank">timepicker.css</a> for styling this widget</li>
 </ul>
 <h2>Public Constructor</h2>
 <p><strong><code>Timepicker(isClockMode, is24HoursSystem, hour, minute, second)</code></strong></p>
@@ -181,11 +181,16 @@ widget.callback = <span class="keyword">function</span>() {
 <h2>Getting Started</h2>
 <h3>Embedding the Timepicker Widget on a Web Page</h3>
 <p>Generally, you'll need to include these both files on any page to use the widget:</p>
-<pre><code><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"libs/timepicker.css"</span>/&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"libs/timepicker.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<p>Offline mode:</p>
+<pre><code><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"../libs/timepicker.css"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"../libs/timepicker.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<p>Or online mode:</p>
+<pre><code><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"https://ZulNs.github.io/libs/timepicker.css"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"https://ZulNs.github.io/libs/timepicker.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre>
 <p>For the following code examples, please insert them at anywhere you want within the document's body below the above code.</p>
-	<link rel="stylesheet" href="../libs/timepicker.css"/>
+	<link rel="stylesheet" href="../libs/timepicker.css" />
 	<script type="text/javascript" src="../libs/timepicker.js"></script>
 <h3>Embedding the Widget as a Realtime Analog Clock</h3>
 <h4>Code example:</h4>
@@ -215,7 +220,10 @@ widget.callback = <span class="keyword">function</span>() {
 <p>&nbsp;</p>
 <h3>Embedding the Widget as a Timepicker</h3>
 <h4>Code example:</h4>
-<pre><code><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"timepicker"</span>&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"picked-text"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">size</span>=<span class="value">"32"</span>/&gt;</span><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"pick-button"</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">onclick</span>=<span class="value">"pickATime();"</span> <span class="attribute">value</span>=<span class="value">"pick"</span>/&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+
+<pre><code><span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"picked-text"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">style</span>=<span class="value">"width: 200px;"</span> /&gt;</span>
+<span class="tag">&lt;<span class="title">input</span> <span class="attribute">id</span>=<span class="value">"pick-button"</span> <span class="attribute">type</span>=<span class="value">"button"</span> <span class="attribute">onclick</span>=<span class="value">"pickATime();"</span> <span class="attribute">style</span>=<span class="value">"width: 50px;"</span> <span class="attribute">value</span>=<span class="value">"pick"</span>/&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"timepicker"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>
 <span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
     <span class="keyword">var</span> pickedTxt = document.getElementById(<span class="string">'picked-text'</span>),
         pickBtn = document.getElementById(<span class="string">'pick-button'</span>),
@@ -233,13 +241,16 @@ widget.callback = <span class="keyword">function</span>() {
 
     <span class="function"><span class="keyword">function</span> <span class="title">pickATime</span><span class="params">()</span> {</span>
         pickBtn.style.display = <span class="string">'none'</span>;
+        pickedTxt.value = <span class="string">''</span>;
         timepicker.show();
     }
 </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
 </code></pre>
 <h4>Result:</h4>
 <p>&nbsp;</p>
-	<div id="timepicker"><input id="picked-text" type="text" size="32"/><input id="pick-button" type="button" onclick="pickATime();" value="pick"/></div>
+<input id="picked-text" type="text" style="width: 200px;" />
+<input id="pick-button" type="button" onclick="pickATime();" style="width: 50px;" value="pick" />
+<div id="timepicker"></div>
 	<script type="text/javascript">
 		var pickedTxt = document.getElementById('picked-text'),
 			pickBtn = document.getElementById('pick-button'),
@@ -257,6 +268,7 @@ widget.callback = <span class="keyword">function</span>() {
 		
 		function pickATime() {
 			pickBtn.style.display = 'none';
+			pickedTxt.value = '';
 			timepicker.show();
 		}
 		
