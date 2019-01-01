@@ -116,14 +116,14 @@ Generally, you'll need to include these both files on any page to use the widget
 Offline mode:
 
 ```html
-<link rel="stylesheet" href="../libs/timepicker.css"/>
+<link rel="stylesheet" href="../libs/timepicker.css" />
 <script type="text/javascript" src="../libs/timepicker.js"></script>
 ```
 
 Or online mode:
 
 ```html
-<link rel="stylesheet" href="https://ZulNs.github.io/libs/timepicker.css"/>
+<link rel="stylesheet" href="https://ZulNs.github.io/libs/timepicker.css" />
 <script type="text/javascript" src="https://ZulNs.github.io/libs/timepicker.js"></script>
 ```
 
