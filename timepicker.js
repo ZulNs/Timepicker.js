@@ -338,6 +338,7 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 		is24H=!is24H;
 		updPickedTm()
 	};
+	this.attachTo=function(el){if(el.appendChild&&!tpick.parentNode){el.appendChild(tpick);return true}return false};
 	this.getElement=function(){return tpick};
 	this.getHours=function(){return hour};
 	this.getMinutes=function(){return minute};
