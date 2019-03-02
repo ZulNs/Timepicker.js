@@ -74,66 +74,66 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
 
   Destroys the widget instance.
 
-- **`getElement()`**
+- **`.getElement()`**
 
   Returns the widget element.
 
-- **`getHours()`**
+- **`.getHours()`**
 
   Returns the selected hours in timepicker mode or current hours in clock mode.
 
-- **`getMinutes()`**
+- **`.getMinutes()`**
 
   Returns the selected minutes in timepicker mode or current minutes in clock mode.
 
-- **`getTimeString()`**
+- **`.getTimeString()`**
 
   Returns the string represents the selected time in timepicker mode or current time in clock mode.
 	If 12 hours system was selected then the time string format is "HH:MM AM/PM". The format will be "HH:MM" if 24 hours system selected.
 
-- **`hide()`**
+- **`.hide()`**
 
   Hides the widget.
 
-- **`is24Hour()`**
+- **`.is24Hour()`**
 
   Returns `true` if 24 hours format was used or `false` if 12 hours used.
 
-- **`isClockMode()`**
+- **`.isClockMode()`**
 
   Returns `true` if the widget mode is a clock or `false` if a timepicker.
 
-- **`isHidden()`**
+- **`.isHidden()`**
 
   Returns `true` if the widget state is hidden or `false` if it is displayed.
 
-- **`isLightTheme()`**
+- **`.isLightTheme()`**
 
   Returns `true` if the light theme is used or `false` if the dark theme is used.
 
-- **`set24Hour(is24Hour)`**
+- **`.set24Hour(is24Hour)`**
 
   Uses 24 hours format if `is24Hour = true` or 12 hours if `is24Hour = false`.
 
-- **`setClock(isClockMode)`**
+- **`.setClock(isClockMode)`**
 
   Sets the widget mode to a clock if `isClockMode = true` or timepicker mode if `isClockMode = false`.
 
-- **`setHours(hour)`**
+- **`.setHours(hour)`**
 
   Sets the timepicker initial hours with `hour` value in the 24 hours system format.
 
-- **`setLightTheme(isLightTheme)`**
+- **`.setLightTheme(isLightTheme)`**
 
   Uses light theme if `isLightTheme = true` or dark theme if `isLightTheme = false`.
 
-- **`setMinutes(minute)`**
+- **`.setMinutes(minute)`**
 
   Sets the timepicker initial minutes with `minute` value.
 
-- **`show()`**
+- **`.show()`**
 
-  Sets.
+  Shows the widget.
 
 ## `Timepicker` Instance Properties
 - **`.onPicked`**
