@@ -330,15 +330,11 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 		ctx.arc(4,90,2,0,2*Math.PI);
 		ctx.fill()
 	};
+	this.attachTo=function(el){if(el.appendChild&&!tpick.parentNode){el.appendChild(tpick);return true}return false};
 	this.destroy=function(){
 		tpick.remove();
 		self=null
 	};
-	this.changeHourSystem=function(){
-		is24H=!is24H;
-		updPickedTm()
-	};
-	this.attachTo=function(el){if(el.appendChild&&!tpick.parentNode){el.appendChild(tpick);return true}return false};
 	this.getElement=function(){return tpick};
 	this.getHours=function(){return hour};
 	this.getMinutes=function(){return minute};
