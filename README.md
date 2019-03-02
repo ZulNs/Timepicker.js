@@ -1,4 +1,4 @@
-# Analog Clock/Timepicker
+# Realtime Analog Clock/Timepicker
 
 ## Demo
 Demo [here](https://zulns.github.io/Timepicker.js/).
