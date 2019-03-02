@@ -1,195 +1,159 @@
-# Timepicker API Documentation
+# Realtime Analog Clock/Timepicker API Documentation
 
-## Overview
-This widget can be used to display a **Realtime Analog Clock** besides as a **Timepicker**. As an timepicker, this widget can be directly draggable at both *hour hand* and *minute hand*. Drag at behind the axis of both hands which causes reverse rotation is also supported. Dragging with touch devices is supported well. Dragging at the clock hand is very smoothly, no matter how much angle of rotation have been made by your finger or mouse pointer, over there the appropriate hand will point at without lagging nor leading even a little. Toggling between 12 hours and 24 hours system can be done on the fly.
+## Constructor
 
-## Download
-- [timepicker.js](../libs/timepicker.js)
+### Syntax
 
-## Requirements
-- [timepicker.css](../libs/timepicker.css) for styling this widget
+```javascript
+new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
+```
 
-## Public Constructor
-**`Timepicker(isClockMode, is24HoursSystem, hour, minute, second)`**
+### Parameters
+- **`isClockMode`** (optional)
+	- `true`: clock mode
+  - `false`: timepicker mode
 
-### Arguments:
-- **`isClockMode`**, sets the widget mode
+  Default: `false`
 
-  **`true`** : realtime analog clock mode
+- **`is24Hour`** (optional)
+  - `true`: 24 hours format
+  - `false`: 12 hours format
 
-  **`false`** : timepicker mode
+  Default: `false`
 
-  Default : **`false`**
+- **`isLightTheme`** (optional)
+  - `true`: light theme
+  - `false`: dark theme
 
-- **`is24HoursSystem`**
+  Default: `false`
 
-  **`true`** : 24 hours system will be used
+- **`hours`** (optional)
 
-  **`false`** : 12 hours system will be used
+  Initial hours for timepicker
+	
+	Default: current hours
 
-  Default : **`false`**
+- **`minutes`** (optional)
 
-- **`hour`**, **`minute`**, and **`second**
+  Initial minutes for timepicker
+	
+	Default: current minutes
 
-  Initial time in 24 hours system format which is the clock's hands will point at. When those are omitted, the current time will be used.
+## Methods
+- **`Timepicker.getHours()`**
 
-## Public Methods
-- **`changeClockMode()`**
+  Returns current hours.
 
-  Toggles the widget mode between a realtime analog clock and a timepicker. 
+- **`Timepicker.getMillis()`**
 
-- **`changeHourSystem()`**
+  Returns current milliseconds.
 
-  Toggles the hour system which will be used, 24 hours or 12 hours system.
+- **`Timepicker.getMinutes()`**
 
-- **`destroy()`**
+  Returns current minutes.
 
-  Destroys the widget object and releases it from memory.
+- **`Timepicker.getSeconds()`**
+
+  Returns current seconds.
+
+- **`Timepicker.getTime()`**
+
+  Returns the time portion of [Unix Time Stamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16).
+
+- **`Timepicker.tzOffset()`**
+
+  Returns the time-zone offset in milliseconds for the current locale.
+
+
+## `Timepicker` Instance Methods
+- **`.attachTo(parentElement)`**
+
+  Attach the widget element into a parent HTML element designated by `parentElement`.
+
+- **`.destroy()`**
+
+  Destroys the widget instance.
 
 - **`getElement()`**
 
-  Returns the widget div element.
+  Returns the widget element.
 
 - **`getHours()`**
 
-  Returns the selected hours.
+  Returns the selected hours in timepicker mode or current hours in clock mode.
 
 - **`getMinutes()`**
 
-  Returns the selected minutes.
+  Returns the selected minutes in timepicker mode or current minutes in clock mode.
 
 - **`getTimeString()`**
 
-  Returns the string of the selected time, it may trailing with `"AM"` or `"PM"` if 12 hours system was used.
+  Returns the string represents the selected time in timepicker mode or current time in clock mode.
+	If 12 hours system was selected then the time string format is "HH:MM AM/PM". The format will be "HH:MM" if 24 hours system selected.
 
 - **`hide()`**
 
   Hides the widget.
 
-- **`is24HoursSystem()`**
+- **`is24Hour()`**
 
-  Returns `true` if 24 hours system was used or `false` for 12 hours system.
+  Returns `true` if 24 hours format was used or `false` if 12 hours used.
 
 - **`isClockMode()`**
 
-  Returns `true` if the current widget is a realtime analog clock or `false` for timepicker.
+  Returns `true` if the widget mode is a clock or `false` if a timepicker.
 
 - **`isHidden()`**
 
-  Returns `true` when the current widget was hidden or `false` if wasn't.
+  Returns `true` if the widget state is hidden or `false` if it is displayed.
 
-- **`setDisplayStyle(style)`**
+- **`isLightTheme()`**
 
-  Sets the widget display style on the page by styling the CSS `display` property to a style which represents by `style` string argument. Default string value is `"block"`, which causes an instance of this widget takes up one row in the document page. To display this widget with another HTML element in a row, provide `"inline-block"` to this argument.
+  Returns `true` if the light theme is used or `false` if the dark theme is used.
 
-- **`setHours(hours)`**
+- **`set24Hour(is24Hour)`**
 
-  Sets the timepicker initial hours in the 24 hours system format.
+  Uses 24 hours format if `is24Hour = true` or 12 hours if `is24Hour = false`.
 
-- **`setMinutes(minutes)`**
+- **`setClock(isClockMode)`**
 
-  Sets the timepicker initial minutes.
+  Sets the widget mode to a clock if `isClockMode = true` or timepicker mode if `isClockMode = false`.
 
-- **`setSeconds(seconds)`**
+- **`setHours(hour)`**
 
-  Sets the timepicker initial seconds.
+  Sets the timepicker initial hours with `hour` value in the 24 hours system format.
 
-## Public Property
-- **`callback`**
+- **`setLightTheme(isLightTheme)`**
 
-  Assign this property to a function that do some processes when a time was selected or when the widget was closed.
+  Uses light theme if `isLightTheme = true` or dark theme if `isLightTheme = false`.
+
+- **`setMinutes(minute)`**
+
+  Sets the timepicker initial minutes with `minute` value.
+
+- **`show()`**
+
+  Sets.
+
+## `Timepicker` Instance Properties
+- **`.onPicked`**
+
+  Assign this property to a function that do some processes when a time was picked.
 
   For example:
 
   ```javascript
-  var widget = new Timepicker();
-  widget.callback = function() {
+  let timepicker = new Timepicker();
+  timepicker.onPicked = function() {
       // do stuff
   };
   ```
-
-## Getting Started
-
-### Embedding the Timepicker Widget on a Web Page
-Generally, you'll need to include these both files on any page to use the widget:
-
-Offline mode:
-
-```html
-<link rel="stylesheet" href="../libs/timepicker.css" />
-<script type="text/javascript" src="../libs/timepicker.js"></script>
-```
-
-Or online mode:
-
-```html
-<link rel="stylesheet" href="https://ZulNs.github.io/libs/timepicker.css" />
-<script type="text/javascript" src="https://ZulNs.github.io/libs/timepicker.js"></script>
-```
-
-For the following code examples, please insert them at anywhere you want within the document's body below the above code.
-
-### Embedding the Widget as a Realtime Analog Clock
-#### Code example:
-
-```html
-<div id="clock"></div>
-<script type="text/javascript">
-    var clock = new Timepicker(true);
-    document.getElementById('clock').appendChild(clock.getElement());
-    clock.show();
-
-    clock.callback = function() {
-        clock.show(); // prevent the widget from being closed
-    };
-</script>
-```
-
-#### Result:
-
-See result at [CodePen](https://codepen.io/zulns/full/yemvNa)
-
-&nbsp;
-
-### Embedding the Widget as a Timepicker
-#### Code example:
-
-```html
-<input id="picked-text" type="text" style="width: 200px;" />
-<input id="pick-button" type="button" onclick="pickATime();" style="width: 50px;" value="pick" />
-<div id="timepicker"></div>
-<script type="text/javascript">
-    var pickedTxt = document.getElementById('picked-text'),
-        pickBtn = document.getElementById('pick-button'),
-        timepicker = new Timepicker();
-    document.getElementById('timepicker').appendChild(timepicker.getElement());
-    timepicker.getElement().style.marginTop = '10px';
-
-    timepicker.callback = function() {
-        pickBtn.style.display = 'inline-block';
-        pickedTxt.value = timepicker.getTimeString();
-        pickedTxt.selectionStart = 0;
-        pickedTxt.selectionEnd = pickedTxt.value.length;
-        pickedTxt.focus();
-    };
-
-    function pickATime() {
-        pickBtn.style.display = 'none';
-        pickedTxt.value = '';
-        timepicker.show();
-    }
-</script>
-```
-
-#### Result:
-
-See result at [CodePen](https://codepen.io/zulns/full/obKENy)
 
 &nbsp;
 
 &nbsp;
 
 ---
-#### Made By ZulNs
-##### @Yogyakarta, February 2016
+#### Designed By ZulNs
+##### @Gorontalo, 25 February 2019
 ---
