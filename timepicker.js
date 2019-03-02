@@ -347,8 +347,8 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 	};
 	this.is24Hour=function(){return is24H};
 	this.isClockMode=function(){return isClk};
-	this.isLightTheme=function(){return isLight};
 	this.isHidden=function(){return isHidden};
+	this.isLightTheme=function(){return isLight};
 	this.onPicked;
 	this.set24Hour=function(h){
 		if(typeof h=='boolean'&&h!=is24H){
