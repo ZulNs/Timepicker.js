@@ -121,7 +121,7 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
 
 - **`.setHours(hour)`**
 
-  Sets the timepicker initial hours with `hour` value in the 24 hours system format.
+  Sets the timepicker initial hours with `hour` value in the 24 hours system format while the widget is in timepicker mode. Ignored in clock mode.
 
 - **`.setLightTheme(isLightTheme)`**
 
@@ -129,7 +129,7 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
 
 - **`.setMinutes(minute)`**
 
-  Sets the timepicker initial minutes with `minute` value.
+  Sets the timepicker initial minutes with `minute` value while the widget is in timepicker mode. Ignored in clock mode.
 
 - **`.show()`**
 
