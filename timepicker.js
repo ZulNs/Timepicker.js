@@ -366,19 +366,24 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 			tpick.style.height=isClk?'240px':'320px';
 			if(isClk){
 				remEvts();
+				hour=Timepicker.getHours();
+				minute=Timepicker.getMinutes();
 				updClkTm();
 				updPickedTm()
 			}else{
+				second=0;
 				window.clearInterval(timerId);
 				addEvts()
 			}
 		}
 	};
 	this.setHours=function(h){
-		if(!isNaN(h))hour=parseInt(h)%24;
-		second=0;
-		updClkPtrs();
-		updPickedTm()
+		if(!isClk&&!isNaN(h)){
+			hour=parseInt(h)%24;
+			second=0;
+			updClkPtrs();
+			updPickedTm()
+		}
 	};
 	this.setLightTheme=function(t){
 		if(typeof t=='boolean'&&t!=isLight){
@@ -387,10 +392,12 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 		}
 	};
 	this.setMinutes=function(m){
-		if(!isNaN(m))minute=parseInt(m)%60;
-		second=0;
-		updClkPtrs();
-		updPickedTm()
+		if(!isClk&&!isNaN(m)){
+			minute=parseInt(m)%60;
+			second=0;
+			updClkPtrs();
+			updPickedTm()
+		}
 	};
 	this.show=function(){
 		if(typeof tpick.parentNode=='undefined'){alert("Timepicker element hasn't attached yet!");return;}
