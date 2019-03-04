@@ -1,4 +1,6 @@
-# Realtime Analog Clock/Timepicker
+# JavaScript Realtime Analog Clock/Timepicker Library
+
+&nbsp;
 
 ## Overview
 This widget can be used to display a **Realtime Analog Clock** besides as a **Timepicker**. As a timepicker, this widget can be directly draggable at both
@@ -45,6 +47,8 @@ Simply put this code snippet to anywhere you want in the body of your html file:
 
 ## API Documentation
 API doc [here](timepicker-api-doc.md).
+
+&nbsp;
 
 &nbsp;
 
