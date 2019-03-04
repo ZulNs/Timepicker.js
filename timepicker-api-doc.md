@@ -121,7 +121,7 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
   Sets the minute (0-59) with an integer value pointed by `minute` if the widget mode is timepicker, ignored in clock mode.
 
 - **`.show()`**<br>
-  Shows this widget. <pre><code> 1</code></pre>
+  Shows this widget. `&nbsp;1`
 
 ## `Timepicker` Instance Properties
 - **`.onPicked`**<br>
