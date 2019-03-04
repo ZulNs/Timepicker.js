@@ -31,11 +31,11 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 
 - **`hours`** (optional)<br>
   Integer value representing the hour of the day.<br>
-	Default: current hour
+  Default: current hour
 
 - **`minutes`** (optional)<br>
   Initial value representing the minute segment of a time.<br>
-	Default: current minute
+  Default: current minute
 
 ## Methods
 - **`Timepicker.getHours()`**<br>
@@ -115,13 +115,13 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 - **`.setLightTheme(isLightTheme)`**<br>
   Sets the appearance of the widget with a boolean value pointed by `isLightTheme`.<br>
   `true`: light theme<br>
-	`false`: dark theme
+  `false`: dark theme
 
 - **`.setMinutes(minute)`**<br>
   Sets the minute (0-59) with an integer value pointed by `minute` if the widget mode is timepicker, ignored in clock mode.
 
 - **`.show()`**<br>
-  Shows this widget.
+  Shows this widget. ` 1`, `12`
 
 ## `Timepicker` Instance Properties
 - **`.onPicked`**<br>
