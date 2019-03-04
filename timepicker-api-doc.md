@@ -5,7 +5,7 @@
 ### Syntax
 
 ```javascript
-new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
+new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 ```
 
 ### Parameters
@@ -29,13 +29,13 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]])
 
 - **`hours`** (optional)
 
-  Initial hours for timepicker
+  Initial hours for timepicker.
 	
 	Default: current hours
 
 - **`minutes`** (optional)
 
-  Initial minutes for timepicker
+  Initial minutes for timepicker.
 	
 	Default: current minutes
 
