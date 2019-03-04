@@ -1,5 +1,7 @@
 # Realtime Analog Clock/Timepicker API Documentation
 
+&nbsp;
+
 ## Constructor
 
 ### Syntax
@@ -9,145 +11,130 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 ```
 
 ### Parameters
-- **`isClockMode`** (optional)
-	- `true`: clock mode
-  - `false`: timepicker mode
-
+- **`isClockMode`** (optional)<br>
+  Boolean value representing the widget mode to perform.<br>
+  `true`: clock mode<br>
+  `false`: timepicker mode<br>
   Default: `false`
 
-- **`is24Hour`** (optional)
-  - `true`: 24 hours format
-  - `false`: 12 hours format
-
+- **`is24Hour`** (optional)<br>
+  Boolean value representing the hour format to apply.<br>
+  `true`: 24 hour<br>
+  `false`: 12 hour<br>
   Default: `false`
 
-- **`isLightTheme`** (optional)
-  - `true`: light theme
-  - `false`: dark theme
-
+- **`isLightTheme`** (optional)<br>
+  Boolean value representing the widget appearance.<br>
+  `true`: light theme<br>
+  `false`: dark theme<br>
   Default: `false`
 
-- **`hours`** (optional)
+- **`hours`** (optional)<br>
+  Integer value representing the hour of the day.<br>
+	Default: current hour
 
-  Initial hours for timepicker.
-	
-	Default: current hours
-
-- **`minutes`** (optional)
-
-  Initial minutes for timepicker.
-	
-	Default: current minutes
+- **`minutes`** (optional)<br>
+  Initial value representing the minute segment of a time.<br>
+	Default: current minute
 
 ## Methods
-- **`Timepicker.getHours()`**
+- **`Timepicker.getHours()`**<br>
+  Returns the current hour (0-23).
 
-  Returns current hours.
+- **`Timepicker.getMillis()`**<br>
+  Returns the current millisecond (0-999).
 
-- **`Timepicker.getMillis()`**
+- **`Timepicker.getMinutes()`**<br>
+  Returns the current minute (0-59).
 
-  Returns current milliseconds.
+- **`Timepicker.getSeconds()`**<br>
+  Returns current second (0-59).
 
-- **`Timepicker.getMinutes()`**
+- **`Timepicker.getTime()`**<br>
+  Returns the "time" portion of [Unix Time Stamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16) that is an integer value representing time elapsed since midnight in milliseconds.
 
-  Returns current minutes.
-
-- **`Timepicker.getSeconds()`**
-
-  Returns current seconds.
-
-- **`Timepicker.getTime()`**
-
-  Returns the time portion of [Unix Time Stamp](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16).
-
-- **`Timepicker.tzOffset()`**
-
+- **`Timepicker.tzOffset()`**<br>
   Returns the time-zone offset in milliseconds for the current locale.
 
 
 ## `Timepicker` Instance Methods
-- **`.attachTo(parentElement)`**
+- **`.attachTo(parentElement)`**<br>
+  Attach this widget element into a parent HTML element designated by `parentElement`.
 
-  Attach the widget element into a parent HTML element designated by `parentElement`.
+- **`.destroy()`**<br>
+  Destroys the current instance of this widget.
 
-- **`.destroy()`**
+- **`.getElement()`**<br>
+  Returns this widget element.
 
-  Destroys the widget instance.
+- **`.getHours()`**<br>
+  Returns the picked hour in timepicker mode or current hour in clock mode.
 
-- **`.getElement()`**
+- **`.getMinutes()`**<br>
+  Returns the picked minute in timepicker mode or current minute in clock mode.
 
-  Returns the widget element.
+- **`.getTimeString()`**<br>
+  Returns the picked time in timepicker mode or current time in clock mode as a human readable string. If 12 hour format was applied then the time string format will be "HH:MM AM/PM". The format will be "HH:MM" if 24 hour format applied.
 
-- **`.getHours()`**
+- **`.hide()`**<br>
+  Hides this widget.
 
-  Returns the selected hours in timepicker mode or current hours in clock mode.
+- **`.is24Hour()`**<br>
+  Returns the applied hour format.<br>
+  `true`: 24 hour<br>
+  `false`: 12 hour
 
-- **`.getMinutes()`**
+- **`.isClockMode()`**<br>
+  Returns the current widget mode<br>
+  `true`: clock<br>
+  `false`: timepicker
 
-  Returns the selected minutes in timepicker mode or current minutes in clock mode.
+- **`.isHidden()`**<br>
+  Returns the current display state of this widget.<br>
+  `true`: hidden<br>
+  `false`: showed
 
-- **`.getTimeString()`**
+- **`.isLightTheme()`**<br>
+  Returns the appearance of this widget.<br>
+  `true`: light theme<br>
+	`false`: dark theme
 
-  Returns the string represents the selected time in timepicker mode or current time in clock mode.
-	If 12 hours system was selected then the time string format is "HH:MM AM/PM". The format will be "HH:MM" if 24 hours system selected.
+- **`.set24Hour(is24Hour)`**<br>
+  Sets the hour format to apply with a boolean value pointed by `is24Hour`.<br>
+  `true`: 24 hour<br>
+  `false`: 12 hour
 
-- **`.hide()`**
+- **`.setClock(isClockMode)`**<br>
+  Sets the widget mode with a boolean value pointed by `isClockMode`.<br>
+  `true`: clock<br>
+  `false`: timepicker
 
-  Hides the widget.
+- **`.setHours(hour)`**<br>
+  Sets the hour (0-23) with an integer value pointed by `hour` if the widget mode is timepicker, ignored in clock mode.
 
-- **`.is24Hour()`**
+- **`.setLightTheme(isLightTheme)`**<br>
+  Sets the appearance of the widget with a boolean value pointed by `isLightTheme`.<br>
+  `true`: light theme<br>
+	`false`: dark theme
 
-  Returns `true` if 24 hours format was used or `false` if 12 hours used.
+- **`.setMinutes(minute)`**<br>
+  Sets the minute (0-59) with an integer value pointed by `minute` if the widget mode is timepicker, ignored in clock mode.
 
-- **`.isClockMode()`**
-
-  Returns `true` if the widget mode is a clock or `false` if a timepicker.
-
-- **`.isHidden()`**
-
-  Returns `true` if the widget state is hidden or `false` if it is displayed.
-
-- **`.isLightTheme()`**
-
-  Returns `true` if the light theme is used or `false` if the dark theme is used.
-
-- **`.set24Hour(is24Hour)`**
-
-  Uses 24 hours format if `is24Hour = true` or 12 hours if `is24Hour = false`.
-
-- **`.setClock(isClockMode)`**
-
-  Sets the widget mode to a clock if `isClockMode = true` or timepicker mode if `isClockMode = false`.
-
-- **`.setHours(hour)`**
-
-  Sets the timepicker initial hours with `hour` value in the 24 hours system format while the widget is in timepicker mode. Ignored in clock mode.
-
-- **`.setLightTheme(isLightTheme)`**
-
-  Uses light theme if `isLightTheme = true` or dark theme if `isLightTheme = false`.
-
-- **`.setMinutes(minute)`**
-
-  Sets the timepicker initial minutes with `minute` value while the widget is in timepicker mode. Ignored in clock mode.
-
-- **`.show()`**
-
-  Shows the widget.
+- **`.show()`**<br>
+  Shows this widget.
 
 ## `Timepicker` Instance Properties
-- **`.onPicked`**
-
-  Assign this property to a function that do some processes when a time was picked.
-
+- **`.onPicked`**<br>
+  Assign this property to a function that do some processes when a time was picked.<br>
   For example:
-
   ```javascript
   let timepicker = new Timepicker();
   timepicker.onPicked = function() {
       // do stuff
   };
   ```
+
+&nbsp;
 
 &nbsp;
 
