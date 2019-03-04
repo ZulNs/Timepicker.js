@@ -1,5 +1,11 @@
 # Realtime Analog Clock/Timepicker
 
+## Overview
+This widget can be used to display a **Realtime Analog Clock** besides as a **Timepicker**. As a timepicker, this widget can be directly draggable at both
+***hour hand*** and ***minute hand***. Drag at behind the axis of both hands which causes reverse rotation is also supported. Dragging on touch devices are
+supported well. Dragging at the both clock hands are very smoothly, no matter how much angle of rotation have been made by your finger or mouse pointer,
+over there the appropriate hand will point at without lagging nor leading even a little.
+
 ## Demo
 Demo [here](https://zulns.github.io/Timepicker.js/).
 
