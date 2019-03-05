@@ -3,9 +3,7 @@
 &nbsp;
 
 ## Constructor
-
 ### Syntax
-
 ```javascript
 new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 ```
