@@ -123,7 +123,7 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 
 ## `Timepicker` Instance Properties
 - **`.onPicked`**<br>
-  Assign this property to a function that do some processes when a time was picked.<br>
+  Assign this property to a function that do some processes when a time was picked. Please note that every time a time is picked, the `.hide()` method always called afterwards.<br>
   For example:
   ```javascript
   let timepicker = new Timepicker();
