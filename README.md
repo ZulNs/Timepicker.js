@@ -18,7 +18,6 @@ No dependencies even css file.
 Simply put this code snippet to anywhere you want in the body of your html file:
 
 ### Offline
-
 ```html
 <div id="timepicker"></div>
 <script type="text/javascript" src="timepicker.js"></script>
@@ -32,7 +31,6 @@ Simply put this code snippet to anywhere you want in the body of your html file:
 ```
 
 ### Online
-
 ```html
 <div id="timepicker"></div>
 <script type="text/javascript" src="https://zulns.github.io/Timepicker.js/timepicker.js"></script>
