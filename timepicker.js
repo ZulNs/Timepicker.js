@@ -338,6 +338,7 @@ function Timepicker(isClk,is24H,isLight,hour,minute){
 	this.getElement=function(){return tpick};
 	this.getHours=function(){return hour};
 	this.getMinutes=function(){return minute};
+	this.getTime=function(){return hour*36e5+minute*6e4};
 	this.getTimeString=function(){return getTmStr()};
 	this.hide=function(){
 		if(!isHidden){
