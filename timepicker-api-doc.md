@@ -71,6 +71,9 @@ new Timepicker([isClockMode[, is24Hour[, isLightTheme[, hours[, minutes]]]]]);
 - **`.getMinutes()`**<br>
   Returns the picked minute in timepicker mode or current minute in clock mode.
 
+- **`.getTime()`**<br>
+  Returns an integer value representing the picked "time" portion of a day in milliseconds.
+
 - **`.getTimeString()`**<br>
   Returns the picked time in timepicker mode or current time in clock mode as a human readable string. If 12 hour format was applied then the time string format will be "HH:MM AM/PM". The format will be "HH:MM" if 24 hour format applied.
 
