@@ -1,6 +1,6 @@
 # JavaScript Realtime Analog Clock/Timepicker Library
 
-&nbsp;
+![](https://zenodo.org/badge/163522223.svg)
 
 ## Overview
 This widget can be used to display a **Realtime Analog Clock** besides as a **Timepicker**. As a timepicker, this widget can be directly draggable at both
